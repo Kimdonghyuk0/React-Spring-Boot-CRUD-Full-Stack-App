@@ -18,7 +18,7 @@ import java.util.List;
 public class MemberController {
 
     private MemberService memberService;
-    //Member 추가 Rest Api
+    // Member 추가 Rest Api
     @PostMapping
     public ResponseEntity<MemberDto> createMember(@RequestBody MemberDto memberDto) {
     MemberDto savedMember = memberService.createMember(memberDto);//dto를 데베에 저장
@@ -26,7 +26,7 @@ public class MemberController {
 
 
     }
-    //Member Get Rest Api
+    // Member Get Rest Api
     @GetMapping("{id}")
     public ResponseEntity<MemberDto> getMemberById(@PathVariable("id") Long memberId) {
         MemberDto memberDto = memberService.getMemberById(memberId);
@@ -46,7 +46,7 @@ public class MemberController {
         MemberDto memberDto = memberService.updateMember(memberId, updateMember);
         return ResponseEntity.ok(memberDto);
     }
-    //Build Delete Member Rest Api
+    // Build Delete Member Rest Api
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteMember(@PathVariable Long id){
 
