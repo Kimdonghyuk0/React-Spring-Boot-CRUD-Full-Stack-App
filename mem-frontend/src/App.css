@@ -1,0 +1,11 @@
+.footer {
+  position: fixed; /* 화면의 하단에 고정 */
+  bottom: 0; /* 페이지의 하단에 위치 */
+  left: 0; /* 왼쪽에 고정 */
+  width: 100%; /* 가로로 전체 화면에 걸치도록 */
+  background-color: #000; /* 검은색 배경 */
+  color: #fff; /* 텍스트 색상은 흰색으로 설정 */
+  text-align: center; /* 텍스트를 중앙에 정렬 */
+  padding: 10px 0; /* 위아래로 10px 패딩 */
+  font-size: 14px; /* 텍스트 크기 */
+}
