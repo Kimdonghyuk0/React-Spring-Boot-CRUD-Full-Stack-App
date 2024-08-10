@@ -52,4 +52,12 @@ public class MemberServiceimpl implements MemberService {
         Member updatedMemberObj = memberRepository.save(member);
         return MemberMapper.mapToMemberDto(updatedMemberObj);
     }
+
+    @Override
+    public void deleteMember(Long memberId) {
+        Member member = memberRepository.findById(memberId).orElseThrow(
+                ()->new RuntimeException("Member not found : " + memberId)
+        );
+        memberRepository.deleteById(memberId);
+    }
 }
